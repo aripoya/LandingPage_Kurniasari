@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.new-tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
     
-    // Set default active tab to 'paket' (Paket Oleh-oleh)
+    // Set default active tab to 'premium' (Bakpia Premium)
     if (tabButtons.length > 0 && tabContents.length > 0) {
         // Hide all tabs first
         tabContents.forEach(content => {
@@ -15,16 +15,16 @@ document.addEventListener('DOMContentLoaded', function() {
             btn.classList.remove('active');
         });
         
-        // Find Paket Oleh-oleh tab and set it as active
-        const paketTab = document.querySelector('.new-tab-btn[data-tab="paket"]');
-        if (paketTab) {
-            paketTab.classList.add('active');
-            const paketContent = document.getElementById('paket');
-            if (paketContent) {
-                paketContent.style.display = 'block';
+        // Find Bakpia Premium tab and set it as active
+        const premiumTab = document.querySelector('.new-tab-btn[data-tab="premium"]');
+        if (premiumTab) {
+            premiumTab.classList.add('active');
+            const premiumContent = document.getElementById('premium');
+            if (premiumContent) {
+                premiumContent.style.display = 'block';
             }
         } else {
-            // Fallback to first tab if paket tab not found
+            // Fallback to first tab if premium tab not found
             tabButtons[0].classList.add('active');
             tabContents[0].style.display = 'block';
         }
