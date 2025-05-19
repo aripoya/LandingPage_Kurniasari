@@ -1,0 +1,50 @@
+/* Fixed approach for wave backgrounds */
+body {
+  position: relative;
+  background-color: #FEFAE0;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Creating pseudo elements for waves that will be fixed and behind content */
+body::before,
+body::after {
+  content: "";
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 250px;
+  background-color: #A9D18E;
+  z-index: -999;
+  pointer-events: none;
+}
+
+body::before {
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+
+body::after {
+  bottom: 0;
+  left: 0;
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Make sure header stays on top */
+header {
+  position: relative;
+  z-index: 999;
+  background-color: white;
+}
+
+/* Remove any backgrounds from sections */
+section {
+  background-color: transparent !important;
+}
+
+/* Make sure all blocks with backgrounds are transparent */
+.hero, .products, .baru-hadir-baru {
+  background-color: transparent !important;
+}

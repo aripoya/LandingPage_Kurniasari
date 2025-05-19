@@ -1,0 +1,49 @@
+/* Simple wave background with clear visibility */
+body {
+  background-color: #FEFAE0;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.top-wave,
+.bottom-wave {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  pointer-events: none;
+}
+
+.top-wave {
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #A9D18E;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+}
+
+.bottom-wave {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #A9D18E;
+  clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Make sure content is above waves */
+header {
+  position: relative;
+  z-index: 10;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* Override any section backgrounds */
+section {
+  background: transparent !important;
+}

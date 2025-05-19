@@ -1,0 +1,49 @@
+/* Direct background styling */
+body {
+  background-color: #FFFDF5;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Top wave overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  background-color: #A9D18E;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  z-index: -1;
+}
+
+/* Bottom wave overlay */
+body::after {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  background-color: #A9D18E;
+  clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+  z-index: -1;
+}
+
+/* Ensure only header appears above the background */
+header {
+  position: relative;
+  z-index: 10;
+}
+
+/* Ensure wave backgrounds are visible but below content */
+body::before, body::after {
+  z-index: -1 !important;
+}
+
+/* Make all sections transparent */
+section {
+  background-color: transparent !important;
+}

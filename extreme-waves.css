@@ -1,0 +1,36 @@
+/* Reset all other CSS */
+.top-wave, .bottom-wave, .wave-container, .wave-top, .wave-bottom {
+  display: none !important;
+}
+
+/* Force body background to be transparent */
+body {
+  background-color: #FEFAE0 !important;
+}
+
+/* Alternative approach: background image for the entire page */
+html {
+  background: linear-gradient(180deg, 
+              #A9D18E 0, #A9D18E 150px, 
+              #FEFAE0 150px, #FEFAE0 calc(100% - 150px), 
+              #A9D18E calc(100% - 150px), #A9D18E 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Make sure header stays on top with white background */
+header {
+  background-color: white !important;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Ensure all sections are transparent */
+section {
+  background-color: transparent !important;
+}
+
+/* Remove any backgrounds from all elements that might interfere */
+.hero, .products, .testimonials, .locations, .contact {
+  background-color: transparent !important;
+}

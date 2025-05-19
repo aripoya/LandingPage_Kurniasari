@@ -1,0 +1,42 @@
+/* Reset existing background */
+body {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    position: relative;
+}
+
+/* Main wrapper for wave backgrounds */
+.wave-bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.top-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: #A9D18E;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+
+.bottom-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: #A9D18E;
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+}

@@ -1,0 +1,19 @@
+/* Background styling dengan pendekatan yang lebih sederhana */
+body {
+  background-color: #FEFAE0;
+  background-image: 
+    url('top-wave.svg'),
+    url('bottom-wave.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: top center, bottom center;
+  background-size: 100% auto, 100% auto;
+  background-attachment: fixed, fixed;
+  margin: 0;
+  padding: 0;
+}
+
+/* Memastikan konten tetap terlihat di atas background */
+header, section, footer {
+  position: relative;
+  z-index: 1;
+}
