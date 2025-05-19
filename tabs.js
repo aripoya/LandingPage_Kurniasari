@@ -3,14 +3,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.new-tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
     
-    // Set default active tab (first tab)
+    // Set default active tab to 'paket' (Paket Oleh-oleh)
     if (tabButtons.length > 0 && tabContents.length > 0) {
-        tabButtons[0].classList.add('active');
-        tabContents[0].style.display = 'block';
+        // Hide all tabs first
+        tabContents.forEach(content => {
+            content.style.display = 'none';
+        });
         
-        // Hide all other tabs
-        for (let i = 1; i < tabContents.length; i++) {
-            tabContents[i].style.display = 'none';
+        // Remove active class from all buttons
+        tabButtons.forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // Find Paket Oleh-oleh tab and set it as active
+        const paketTab = document.querySelector('.new-tab-btn[data-tab="paket"]');
+        if (paketTab) {
+            paketTab.classList.add('active');
+            const paketContent = document.getElementById('paket');
+            if (paketContent) {
+                paketContent.style.display = 'block';
+            }
+        } else {
+            // Fallback to first tab if paket tab not found
+            tabButtons[0].classList.add('active');
+            tabContents[0].style.display = 'block';
         }
     }
     
