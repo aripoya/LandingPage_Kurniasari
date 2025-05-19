@@ -486,12 +486,12 @@ nav ul li a:hover {
 .tab-btn {
     padding: 10px 20px;
     background: transparent;
-    border: 2px solid var(--primary-color);
+    border: none;
     color: var(--primary-color);
     font-weight: 600;
     cursor: pointer;
     margin: 0 5px 10px;
-    border-radius: 5px;
+    border-radius: 0;
     transition: all 0.3s ease;
 }
 
