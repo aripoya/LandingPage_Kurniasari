@@ -1,6 +1,6 @@
 // Tab functionality for product section
 document.addEventListener('DOMContentLoaded', function() {
-    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabButtons = document.querySelectorAll('.new-tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
     
     // Set default active tab (first tab)

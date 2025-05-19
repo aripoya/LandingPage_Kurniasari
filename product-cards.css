@@ -8,7 +8,7 @@
     font-weight: 600;
 }
 
-.tab-buttons {
+.new-tabs {
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
@@ -16,8 +16,8 @@
     padding-bottom: 10px;
 }
 
-.tab-btn {
-    background: transparent;
+.new-tab-btn {
+    background: transparent !important;
     border: none;
     padding: 10px 20px;
     margin: 0 15px;
@@ -29,16 +29,18 @@
     transition: color 0.3s ease;
 }
 
-.tab-btn:hover {
+.new-tab-btn:hover {
     color: #6A8A28;
+    background: transparent !important;
 }
 
-.tab-btn.active {
-    color: #6A8A28;
+.new-tab-btn.active {
+    color: #6A8A28 !important;
     font-weight: 600;
+    background: transparent !important;
 }
 
-.tab-btn.active::after {
+.new-tab-btn.active::after {
     content: '';
     position: absolute;
     bottom: -10px;
